@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker | WebCourse</title>
+    <meta name="description" content="A VitePress site">
+    <link rel="stylesheet" href="/assets/style.49eed234.css">
+    <link rel="modulepreload" href="/assets/Home.e7184701.js">
+    <link rel="modulepreload" href="/assets/app.31a3e9dd.js">
+    <link rel="modulepreload" href="/assets/base_docker_index.md.c4bd007e.lean.js">
+    
+    <meta name="twitter:title" content="Docker | WebCourse">
+  <meta property="og:title" content="Docker | WebCourse">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-675d8756><div class="sidebar-button" data-v-675d8756><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/" aria-label="WebCourse, back to home" data-v-675d8756 data-v-cc01ef16><!----> WebCourse</a><div class="flex-grow" data-v-675d8756></div><div class="nav" data-v-675d8756><!----></div><!--[--><!--]--></header><aside class="sidebar" data-v-83e92a68><!----><!--[--><!--]--><ul class="sidebar-links" data-v-83e92a68><!--[--><li class="sidebar-link"><a class="sidebar-link-item" href="#docker-installing">Docker Installing</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#docker-配置">Docker 配置</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#docker-常用命令">Docker 常用命令</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#基础知识">基础知识</a><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="#概念">概念</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#image-镜像">image 镜像</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#container">Container</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#docker-常用命令-1">Docker 常用命令</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#dockerfile">Dockerfile</a><!----></li></ul></li><li class="sidebar-link"><a class="sidebar-link-item" href="#进阶">进阶</a><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="#docker-engine">Docker Engine</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#docker-架构">Docker 架构</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#docker-底层技术支持">Docker 底层技术支持</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#docker的镜像分层">docker的镜像分层</a><!----></li></ul></li><li class="sidebar-link"><a class="sidebar-link-item" href="#docker-安装">Docker 安装</a><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="#使用vagrant安装centos">使用vagrant安装CentOS</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#centos安装docker">CentOS安装Docker</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#添加docker到sudo">添加docker到sudo</a><!----></li></ul></li><!--]--></ul><!--[--><!--]--></aside><div class="sidebar-mask"></div><main class="page" data-v-7eddb2c4><div class="container" data-v-7eddb2c4><!--[--><!--]--><div style="position:relative;" class="content" data-v-7eddb2c4><div><h1 id="docker" tabindex="-1">Docker <a class="header-anchor" href="#docker" aria-hidden="true">#</a></h1><h2 id="docker-installing" tabindex="-1">Docker Installing <a class="header-anchor" href="#docker-installing" aria-hidden="true">#</a></h2><h2 id="docker-配置" tabindex="-1">Docker 配置 <a class="header-anchor" href="#docker-配置" aria-hidden="true">#</a></h2><h2 id="docker-常用命令" tabindex="-1">Docker 常用命令 <a class="header-anchor" href="#docker-常用命令" aria-hidden="true">#</a></h2><h2 id="基础知识" tabindex="-1">基础知识 <a class="header-anchor" href="#基础知识" aria-hidden="true">#</a></h2><h3 id="概念" tabindex="-1">概念 <a class="header-anchor" href="#概念" aria-hidden="true">#</a></h3><ul><li><p>Image 镜像</p></li><li><p>Container 容器: 类似于一个轻级的沙箱，Docker 利用容器来运行和隔离应用。</p></li><li><p>Repository 仓库</p></li></ul><h3 id="image-镜像" tabindex="-1">image 镜像 <a class="header-anchor" href="#image-镜像" aria-hidden="true">#</a></h3><ul><li>image本身是一个 read-only 的文件</li><li>这个文件包含文件系统，源码，库文件，依赖，工具等一些运行application所需要的文件</li><li>可以理解成一个模版</li><li>layer, image 是分层的，并且每一层都可以添加改变删除文件，称为一个新的image </li><li>不同image可以共享相同的 layer</li></ul><h4 id="image的获取方式" tabindex="-1">image的获取方式 <a class="header-anchor" href="#image的获取方式" aria-hidden="true">#</a></h4><ul><li><p>1.Build from Dockerfile</p><ul><li><div class="language-sh line-numbers-mode"><pre><code>docker build -t node:latest .
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ul></li><li><p>2.Pull from Registry</p><ul><li><div class="language-sh line-numbers-mode"><pre><code>docker pull ubuntu:14.04
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ul></li></ul><h3 id="container" tabindex="-1">Container <a class="header-anchor" href="#container" aria-hidden="true">#</a></h3><p>可以把容器看作一个简易版的 Linux 系统环境（包括 root 用户权限、进程空间、用户空间和网络空间等）以及运行在其中的应用程序打包而成的盒子。</p><p>实质上是复制image并在image最上层加上一层 read-write 的层，称为 container layer. <img src="/assets/d01651f8383b9bf1685154611aa56f26549ad23f815e9273c0e1a4ebfe82a49a.d01651f8.png" alt="picture 1"></p><blockquote><p>镜像自身是只读的 容器从镜像启动的时候，会在镜像的最上层创建一个可写层</p></blockquote><ul><li>通过 image 创建 （copy）</li><li>在 image layer 之上建立一个 container layer（可读写）</li><li>image负责app的存储和分发，container负责运行app</li></ul><h3 id="docker-常用命令-1" tabindex="-1">Docker 常用命令 <a class="header-anchor" href="#docker-常用命令-1" aria-hidden="true">#</a></h3><div class="language-sh line-numbers-mode"><pre><code>docker version
+docker info
+
+### images
+docker images ls
+docker pull &lt;image&gt;
+docker run -it &lt;imageName|imageId&gt;
+docker history -H --no-trunc &lt;imageId&gt;
+docker rmi &lt;imageId&gt;
+docker commit &lt;container&gt; [REPOSITORY[:TAG]] [flags]
+docker build -t &lt;tagName&gt; &lt;REPOSITORY[:TAG]&gt;
+docker push
+
+### containers
+docker ps -a
+
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h3 id="dockerfile" tabindex="-1">Dockerfile <a class="header-anchor" href="#dockerfile" aria-hidden="true">#</a></h3><ul><li>FROM <ul><li>FROM scratch</li><li>FROM centos</li></ul></li><li>LABEL <ul><li>LABEL <a href="mailto:maintainer=%22xxx@qq.com">maintainer=&quot;xxx@qq.com</a>&quot;</li><li>LABEL version=&quot;1.0&quot;</li><li>LABEL description=&quot;this is a description&quot;</li></ul></li><li>RUN 运行命令，每执行一次会生成一层layer，避免无用分层，合并多条命令成一行</li><li>WORKDIR 指定工作目录，如果没有会自动创建，类似linux的cd命令 <ul><li>WORKDIR /root</li><li>WORKDIR demo</li><li>RUN pwd # output: /root/demo</li></ul></li></ul><h2 id="进阶" tabindex="-1">进阶 <a class="header-anchor" href="#进阶" aria-hidden="true">#</a></h2><h3 id="docker-engine" tabindex="-1">Docker Engine <a class="header-anchor" href="#docker-engine" aria-hidden="true">#</a></h3><ul><li>后台进程(dockerd)</li><li>REST API Server</li><li>CLI接口 (docker)</li></ul><h3 id="docker-架构" tabindex="-1">Docker 架构 <a class="header-anchor" href="#docker-架构" aria-hidden="true">#</a></h3><h3 id="docker-底层技术支持" tabindex="-1">Docker 底层技术支持 <a class="header-anchor" href="#docker-底层技术支持" aria-hidden="true">#</a></h3><ul><li>Namespaces（名称空间）: 做隔离 pid, net, ipc, mnt, uts</li><li>cgroups, Control groups（控制组）: 进行资源隔离</li><li>Union file systems（联合文件系统）： Container和image的分层</li></ul><h3 id="docker的镜像分层" tabindex="-1">docker的镜像分层 <a class="header-anchor" href="#docker的镜像分层" aria-hidden="true">#</a></h3><p>dockerfile中的每一条命令，都会构建一层文件。</p><h2 id="docker-安装" tabindex="-1">Docker 安装 <a class="header-anchor" href="#docker-安装" aria-hidden="true">#</a></h2><ul><li>virtualbox</li><li>vagrant</li></ul><h3 id="使用vagrant安装centos" tabindex="-1">使用vagrant安装CentOS <a class="header-anchor" href="#使用vagrant安装centos" aria-hidden="true">#</a></h3><div class="language-sh line-numbers-mode"><pre><code>vagrant init centos/7	# 初始化配置
+vagrant up	# 启动
+
+vagrant ssh	# 登录虚拟机
+vagrant status # 查看
+vagrant halt	# 停止虚拟机
+vagrant destory # 删除虚拟机
+
+
+# vagrant up 初始启动，需要下载镜像，可离线下载后add
+vagrant box list
+vagrant box add &lt;name&gt; &lt;box_uri&gt;
+# eg: vagrant box add centos/7 C:\XSBDownload\CentOS-7-x86_64-Vagrant-2004_01.VirtualBox.box
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="centos安装docker" tabindex="-1">CentOS安装Docker <a class="header-anchor" href="#centos安装docker" aria-hidden="true">#</a></h3><p><a href="https://docs.docker.com/engine/install/centos/" target="_blank" rel="noopener noreferrer">Install Docker Engine on CentOS | Docker Documentation</a></p><div class="language-sh line-numbers-mode"><pre><code>sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+                  
+sudo yum install -y yum-utils
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+
+## 1.安装最新的Docker Enginer
+sudo yum install docker-ce docker-ce-cli containerd.io
+
+## 2.或者指定版本
+yum list docker-ce --showduplicates | sort -r
+sudo yum install docker-ce-&lt;VERSION_STRING&gt; docker-ce-cli-&lt;VERSION_STRING&gt; containerd.io
+
+## 3.启动 Docker
+sudo systemctl start docker
+## 4.测试
+sudo docker run hello-world
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h3 id="添加docker到sudo" tabindex="-1">添加docker到sudo <a class="header-anchor" href="#添加docker到sudo" aria-hidden="true">#</a></h3><ul><li>报错问题</li></ul><div class="language-sh line-numbers-mode"><pre><code>[vagrant@10 ~]$ docker images
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get &quot;http://%2Fvar%2Frun%2Fdocker.sock/v1.24/images/json&quot;: dial unix /var/run/docker.sock: connect: permission denied
+[vagrant@10 ~]$ sudo docker images
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+hello-world   latest    feb5d9fea6a5   3 months ago   13.3kB
+[vagrant@10 ~]$
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ul><li><p>解决办法</p><div class="language-sh line-numbers-mode"><pre><code>sudo groupadd docker
+sudo gpasswd -a vagrant docker
+sudo kill -SIGHUB ${pidof dockerd} 	# 重载进程
+exit
+vagrant ssh
+docker version
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li></ul><blockquote><p>docker.tips</p></blockquote></div></div><footer class="page-footer" data-v-7eddb2c4 data-v-fb8d84c6><div class="edit" data-v-fb8d84c6><div class="edit-link" data-v-fb8d84c6 data-v-1ed99556><!----></div></div><div class="updated" data-v-fb8d84c6><!----></div></footer><!----><!--[--><!--]--></div></main></div><!----><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"base_docker_index.md\":\"c4bd007e\",\"base_index.md\":\"d0f9219b\",\"base_lerna_index.md\":\"36f37ead\",\"base_node_index.md\":\"727a6ebc\",\"base_npm_index.md\":\"a121fb80\",\"base_pnpm_index.md\":\"d70f5b25\",\"base_v8_index.md\":\"9ccd558d\",\"base_vitepress_index.md\":\"1ab28f4e\",\"base_wechat_index.md\":\"edbd69f5\",\"base_yarn_index.md\":\"64ea38b6\",\"index.md\":\"275d3d71\",\"topic_container_index.md\":\"91b61937\",\"topic_data-visualization_139_index.md\":\"95da843b\",\"topic_data-visualization_index.md\":\"478ef8e7\",\"topic_index.md\":\"8a38715f\"}")</script>
+    <script type="module" async src="/assets/app.31a3e9dd.js"></script>
+    
+  </body>
+</html>

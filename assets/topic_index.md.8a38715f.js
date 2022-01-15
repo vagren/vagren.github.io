@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.31a3e9dd.js";const l='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"base/lerna/index.md","lastUpdated":1642241709190}',r={};function s(n,o,c,d,p,i){return a(),t("div")}var f=e(r,[["render",s]]);export{l as __pageData,f as default};
