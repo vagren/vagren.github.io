@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as a,d as p}from"./app.79b189f8.js";const d='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"base/gitee/gitee.md","lastUpdated":1642421082240}',t={},e=p("",1),o=[e];function c(l,u,i,r,k,m){return a(),s("div",null,o)}var f=n(t,[["render",c]]);export{d as __pageData,f as default};
