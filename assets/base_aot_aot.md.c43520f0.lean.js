@@ -1,0 +1,1 @@
+import{_ as t,c as a,o as e}from"./app.79b189f8.js";const f='{"title":"Compare with JIT","description":"","frontmatter":{},"headers":[],"relativePath":"base/aot/aot.md","lastUpdated":1643128889160}',o={};function r(s,c,p,n,_,d){return e(),a("div")}var l=t(o,[["render",r]]);export{f as __pageData,l as default};

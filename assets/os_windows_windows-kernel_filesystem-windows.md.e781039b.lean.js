@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s}from"./app.79b189f8.js";const f='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"base/css/css.md","lastUpdated":1642421758110}',a={};function r(o,c,n,p,d,i){return s(),t("div")}var l=e(a,[["render",r]]);export{f as __pageData,l as default};

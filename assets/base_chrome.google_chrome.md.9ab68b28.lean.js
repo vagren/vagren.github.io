@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as a,d as e}from"./app.79b189f8.js";const k='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"base/chrome.google/chrome.md","lastUpdated":1642421758110}',t={},o=e("",1),c=[o];function p(r,i,l,_,d,u){return a(),s("div",null,c)}var b=n(t,[["render",p]]);export{k as __pageData,b as default};

@@ -1,0 +1,1 @@
+import{_ as i,c as l,o,d as e}from"./app.79b189f8.js";const w='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"os/windows/windows-kernel/\u5783\u573E\u6E05\u7406.md","lastUpdated":1639820998000}',t={},a=e("",1),c=[a];function d(s,n,r,_,p,u){return o(),l("div",null,c)}var g=i(t,[["render",d]]);export{w as __pageData,g as default};

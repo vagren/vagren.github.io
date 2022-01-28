@@ -1,1 +1,0 @@
-import{_ as l,c as i,o as e,d as n}from"./app.79b189f8.js";const L='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"base/linux/distribution/release-linux.md","lastUpdated":1642421130160}',u={},a=n("",1),t=[a];function o(r,s,_,c,d,x){return e(),i("div",null,t)}var h=l(u,[["render",o]]);export{L as __pageData,h as default};
