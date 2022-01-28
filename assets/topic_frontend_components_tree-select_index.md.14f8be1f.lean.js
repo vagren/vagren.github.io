@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r,d as a}from"./app.79b189f8.js";const m='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"topic/frontend/components/tree-select/index.md","lastUpdated":1635607716000}',n={},o=a("",2),c=[o];function h(p,s,l,_,f,u){return r(),t("div",null,c)}var d=e(n,[["render",h]]);export{m as __pageData,d as default};

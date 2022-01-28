@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as e,d as a}from"./app.79b189f8.js";const d='{"title":"web\u8DEF\u7531","description":"","frontmatter":{},"headers":[],"relativePath":"topic/frontend/router/index.md","lastUpdated":1643382350900}',r={},p=a("",45),t=[p];function l(o,i,b,u,c,m){return e(),s("div",null,t)}var g=n(r,[["render",l]]);export{d as __pageData,g as default};
